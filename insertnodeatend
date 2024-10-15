@@ -1,0 +1,24 @@
+
+
+class Solution {
+  public:
+    Node *insertAtEnd(Node *head, int x) {
+       
+        if(head==NULL){
+            Node*newNode = new Node(x);
+            return newNode;
+        }
+        // Code here
+        Node*temp=head;
+        while(temp->next!=NULL){
+            temp=temp->next;
+        }
+         Node*newNode=new Node(x);
+        
+        temp->next=newNode;
+        newNode->next=NULL;
+        return head;
+    }
+};
+
+
